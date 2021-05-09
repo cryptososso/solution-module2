@@ -1,6 +1,8 @@
 *{
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #header{
@@ -11,21 +13,23 @@
 
 .row{
 	width: 100%;
-	position: absolute;
+    display: flex;
+    flex-direction: columns;
 	padding: 20px;
-	display: flex;
-	flex-direction: row;
+	position: relative;
 }
 
 section{
-	width: 50%;
+	width: 100%;
+	float: right;
 	padding: 10px;
 	border: 3px solid black;
-	margin: 10px;
 	background:#DCE3E6;
+	margin-right: 20px;
 }
 
 #h2{
+	margin:-10px;
 	position: relative;
 	float: right;
 	padding: 5px 10px 5px 10px;
@@ -35,6 +39,7 @@ section{
 }
 
 #h3{
+	margin:-10px;
 	position: relative;
 	float: right;
 	padding: 5px 10px 5px 10px;
@@ -44,6 +49,7 @@ section{
 }
 
 #h4{
+	margin: -10px;
 	position: relative;
 	float: right;
 	padding: 5px 10px 5px 10px;
@@ -53,6 +59,46 @@ section{
 	}
 
 p{
-	padding-top : 70px;
+	width: 100%;
+	padding-top : 50px;
 	font-size: 18px;
+}
+
+@media(min-width: 992px){
+	.col-lg-1, .col-lg-2, .col-lg-3,.col-lg-4,.col-lg-5, .col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,
+	.col-lg-11, .col-lg-12{
+		float: right;
+	}
+
+	.col-lg-4{
+		width: 33%;
+	}
+
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+	.col-md-1, .col-md-2, .col-md-3,.col-md-4,.col-md-5, .col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,
+	.col-md-11, .col-md-12{
+			float: right;
+	}
+
+   .col-md-12{
+   	width: 94%;
+   	position: absolute;
+   	bottom : -200px;
+   }
+}
+
+
+@media(max-width: 767px){
+	.col-sm-1, .col-sm-2, .col-sm-3,.col-sm-4,.col-md-5, .col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,
+	.col-sm-11, .col-sm-12{
+		float: right;
+	}
+
+	.col-sm-12{
+		width: 100%;
+		margin-bottom: 100px;
+		bottom: -100px;
+	}
 }
